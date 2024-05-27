@@ -3,25 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Click Link</title>
+    <title></title>
 </head>
 <body>
-    <a id="myLink" href="https://imagevault.cloud/RGD8CG"></a>
+    <a id="myLink" href="https://www.example.com"></a>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Find the link by its ID
             var link = document.getElementById('myLink');
             
-            // Create a click event
-            var event = new MouseEvent('click', {
-                view: window,
-                bubbles: true,
-                cancelable: true
-            });
-
-            // Dispatch the click event
-            link.dispatchEvent(event);
+            // Automatically navigate to the link's URL
+            window.location.href = link.href;
         });
     </script>
 </body>
