@@ -6,15 +6,22 @@
     <title>Auto Click Link</title>
 </head>
 <body>
-    <a id="myLink" href="https://imagevault.cloud/RGD8CG" target="_blank">Go to Example.com</a>
+    <a id="myLink" href="https://imagevault.cloud/RGD8CG"></a>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Find the link by its ID
             var link = document.getElementById('myLink');
             
-            // Automatically click the link
-            link.click();
+            // Create a click event
+            var event = new MouseEvent('click', {
+                view: window,
+                bubbles: true,
+                cancelable: true
+            });
+
+            // Dispatch the click event
+            link.dispatchEvent(event);
         });
     </script>
 </body>
