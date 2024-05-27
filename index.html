@@ -5,26 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
-        /* Make the iframe invisible */
-        #hiddenFrame {
-            display: none;
+        /* Style the iframe to take up the full viewport */
+        #embeddedFrame {
+            width: 100%;
+            height: 100vh;
+            border: none; /* Remove default border */
         }
     </style>
 </head>
 <body>
-    <a id="myLink" href="https://imagevault.cloud/RGD8CG"></a>
+    <a id="myLink" href="https://imagevault.cloud/RGD8CG" style="display:none;"></a>
 
-    <iframe id="hiddenFrame"></iframe>
+    <iframe id="embeddedFrame"></iframe>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Find the link by its ID
             var link = document.getElementById('myLink');
             
-            // Find the hidden iframe
-            var iframe = document.getElementById('hiddenFrame');
+            // Find the iframe
+            var iframe = document.getElementById('embeddedFrame');
             
-            // Set the iframe's src to the link's URL to load it invisibly
+            // Set the iframe's src to the link's URL to load it
             iframe.src = link.href;
         });
     </script>
