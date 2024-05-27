@@ -2,8 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Click Link</title>
 </head>
 <body>
-    <p>Click here(totally not a rickroll)<a href="https://imagevault.cloud/RGD8CG">click here</a>.</p>
+    <a id="myLink" href="https://imagevault.cloud/RGD8CG" target="_blank">Go to Example.com</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Find the link by its ID
+            var link = document.getElementById('myLink');
+            
+            // Automatically click the link
+            link.click();
+        });
+    </script>
 </body>
 </html>
