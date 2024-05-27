@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <style>
+        /* Make the iframe invisible */
+        #hiddenFrame {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <a id="myLink" href="https://www.example.com"></a>
+    <a id="myLink" href="https://imagevault.cloud/RGD8CG"></a>
+
+    <iframe id="hiddenFrame"></iframe>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Find the link by its ID
             var link = document.getElementById('myLink');
             
-            // Automatically navigate to the link's URL
-            window.location.href = link.href;
+            // Find the hidden iframe
+            var iframe = document.getElementById('hiddenFrame');
+            
+            // Set the iframe's src to the link's URL to load it invisibly
+            iframe.src = link.href;
         });
     </script>
 </body>
