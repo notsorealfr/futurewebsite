@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Location</title>
+    <title>Discord ID2IP</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        #location { font-size: 1.5em; }
+        #location { font-size: 1.5em; margin-top: 20px; }
+        #search-bar { font-size: 1em; padding: 10px; width: 80%; }
     </style>
 </head>
 <body>
     <h1>Your Current Location</h1>
+    <input type="text" id="search-bar" placeholder="Discord ID to IP">
     <div id="location">Fetching location...</div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
